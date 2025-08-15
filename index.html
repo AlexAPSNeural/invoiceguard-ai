@@ -3,103 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InvoiceGuard AI - Automate Invoice Verification</title>
+    <title>InvoiceGuard AI</title>
     <style>
-        body {
+        body, html {
             margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
             color: #333;
-            background-color: #f4f5f7;
-            line-height: 1.6;
         }
-        header {
-            background-color: #2a2b3d;
+        .header {
+            background-color: #0A74DA;
             color: #fff;
             padding: 20px 0;
             text-align: center;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .hero {
-            background-color: #5c6bc0;
-            color: #fff;
-            padding: 80px 20px;
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            border-radius: 8px;
+            padding: 50px 20px;
+        }
+        .main-content h1 {
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin: 0 0 20px;
+        .main-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
         }
-        .hero p {
-            font-size: 1.25rem;
+        .cta-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #0A74DA;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-        .value-proposition {
+        .cta-button:hover {
+            background-color: #084B9C;
+        }
+        .features {
             display: flex;
+            justify-content: space-around;
             flex-wrap: wrap;
-            gap: 20px;
+            margin-top: 50px;
         }
-        .value-item {
-            background-color: #fff;
-            flex: 1 1 calc(33.333% - 20px);
+        .feature {
+            flex: 1 1 200px;
+            margin: 20px;
             padding: 20px;
+            border: 1px solid #ccc;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         }
-        .value-item h3 {
+        .feature h3 {
+            font-size: 1.5rem;
             margin-bottom: 10px;
-            color: #5c6bc0;
+        }
+        .feature p {
+            font-size: 1rem;
         }
         @media (max-width: 768px) {
-            .value-item {
-                flex: 1 1 calc(50% - 20px);
+            .main-content p {
+                font-size: 1rem;
             }
-        }
-        @media (max-width: 576px) {
-            .value-item {
-                flex: 1 1 100%;
+            .features {
+                flex-direction: column;
+                align-items: center;
             }
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #2a2b3d;
-            color: #fff;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>InvoiceGuard AI</h1>
     </header>
-    <section class="hero">
-        <div class="container">
-            <h1>Automate Invoice Verification with AI</h1>
-            <p>Reduce fraud and errors, ensure timely payments, and save up to 25% on processing costs.</p>
+    <main class="main-content">
+        <h1>Automate Invoice Verification</h1>
+        <p>Reduce fraud and errors, and ensure timely payments with InvoiceGuard AI's advanced machine learning algorithms. Save up to 25% on processing costs and minimize financial discrepancies.</p>
+        <button class="cta-button">Get Started</button>
+        <div class="features">
+            <div class="feature">
+                <h3>Reduce Fraud</h3>
+                <p>Leverage cutting-edge technology to detect fraudulent activities before they cause harm.</p>
+            </div>
+            <div class="feature">
+                <h3>Minimize Errors</h3>
+                <p>Automate the verification process to significantly reduce manual errors in billing.</p>
+            </div>
+            <div class="feature">
+                <h3>Ensure Timely Payments</h3>
+                <p>Streamline your payment processes to ensure no delays in your financial operations.</p>
+            </div>
         </div>
-    </section>
-    <section class="value-proposition container">
-        <div class="value-item">
-            <h3>Fraud Reduction</h3>
-            <p>Leverage machine learning to detect and prevent fraudulent invoices.</p>
-        </div>
-        <div class="value-item">
-            <h3>Error Minimization</h3>
-            <p>Ensure accuracy in invoice processing to minimize financial discrepancies.</p>
-        </div>
-        <div class="value-item">
-            <h3>Cost Savings</h3>
-            <p>Streamline processes to save up to 25% on processing costs.</p>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2023 InvoiceGuard AI. All rights reserved.</p>
-    </footer>
+    </main>
 </body>
 </html>
