@@ -9,30 +9,33 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Welcome to InvoiceGuard AI');
+  res.send('Welcome to InvoiceGuard AI API');
 });
 
-// Define your routes here
-app.post('/verify-invoice', (req, res) => {
-  // Implementation for invoice verification
-  res.json({ success: true, message: 'Invoice processed' });
+app.post('/verifyInvoice', async (req, res, next) => {
+  try {
+    const { invoiceData } = req.body;
+    if (!invoiceData) {
+      throw new Error('Invoice data is required');
+    }
+    // Simulate verification process
+    const isValid = await verifyInvoice(invoiceData);
+    res.json({ verified: isValid });
+  } catch (error) {
+    next(error);
+  }
 });
 
-app.use((req, res, next) => {
-  const error = new Error('Not Found');
-  error.status = 404;
-  next(error);
-});
-
-app.use((error, req, res, next) => {
-  res.status(error.status || 500);
-  res.json({
-    error: {
-      message: error.message,
-    },
-  });
+app.use((err, req, res, next) => {
+  res.status(500).json({ error: err.message || 'Internal Server Error' });
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`InvoiceGuard AI server running on port ${PORT}`);
 });
+
+// Mock function to simulate invoice verification
+async function verifyInvoice(data) {
+  // Implement actual AI/ML verification logic here
+  return true; // assuming verification passes
+}
