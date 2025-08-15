@@ -12,6 +12,6 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Your Name",
+  "license": "MIT"
 }
