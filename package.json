@@ -1,0 +1,17 @@
+{
+  "name": "InvoiceGuard AI",
+  "version": "1.0.0",
+  "description": "InvoiceGuard AI automates invoice verification, reducing fraud and errors, and ensuring timely payments. By leveraging advanced machine learning algorithms, businesses can save up to 25% on processing costs and minimize financial discrepancies.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3"
+  },
+  "author": "",
+  "license": "ISC"
+}
